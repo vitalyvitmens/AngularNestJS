@@ -1,3 +1,69 @@
+<!-- <h1>{{h1}}</h1>
 <div class="container">
-  <div class="box">Hello, {{ name }} !</div>
+  <div class="box">Hello, {{ name }}!</div>
+</div>
+<footer class="copyright">&copy; {{footer}}</footer> -->
+
+<!-- TODO: Class vs Method Variables (Класс против переменных метода) -->
+<!-- <h1>{{ h1 }}</h1>
+<div class="container">
+  <div class="box">{{ speak() }}!</div>
+</div>
+<footer class="copyright">&copy; {{ footer }}</footer> -->
+
+<!-- TODO: Iterating through String Arrays (Итерация по массивам строк) -->
+<!-- <h1>{{ h1 }}</h1>
+
+<div class="container">
+  <div class="box">
+    <div *ngFor="let color of colors">
+      {{ color }}
+    </div>
+  </div>
+</div>
+
+<footer class="copyright">&copy; {{ footer }}</footer> -->
+
+<!-- TODO: Iterating with Indices (Итерация с индексами) -->
+<!-- <h1>{{ h1 }}</h1>
+
+<div class="container">
+  <div class="box">
+    <div *ngFor="let fruit of fruits; let i = index">
+      Fruit {{ i }} is {{ fruit }}
+    </div>
+  </div>
+</div>
+
+<footer class="copyright">&copy; {{ footer }}</footer> -->
+
+<!-- TODO: Iterating through Custom Types (Перебор пользовательских типов) -->
+<!-- <div>
+  <div *ngFor="let car of cars">
+    {{ car.make }} {{ car.model }} with a mileage of {{ car.miles }}
+  </div>
+</div> -->
+
+<!-- TODO: Import Interface into a Service (Импорт интерфейса в сервис) -->
+<!-- <div>
+  <p>this is where will will eventually loop through our car types.</p>
+  <div *ngFor="let car of cars"></div>
+</div> -->
+
+<!-- TODO: Recreating Car Array in a Service (Воссоздание массива автомобилей в сервисе) -->
+<!-- <div>
+  <p>this is where will will eventually loop through our car types.</p>
+
+  <!-- this loop doesn't run because we don't have an array yet
+ in the component -->
+  <!-- <div *ngFor="let car of cars" >
+    We have a {{ car.make }} {{ car.model }} with a mileage of {{ car.miles }}
+  </div>
+</div> -->
+
+<!-- TODO: Dependency Injection (Внедрение зависимости) -->
+<div>
+  <div *ngFor="let car of cars">
+    <p>We have a {{car.make}} {{car.model}} with a mileage of {{car.miles}}</p>
+  </div>
 </div>
