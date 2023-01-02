@@ -118,23 +118,74 @@
 // }
 
 // TODO: Dependency Injection (Внедрение зависимости)
-import { Component } from '@angular/core';
-import { TransportationService } from './transportation.service';
-import { Car } from './car';
+// import { Component } from '@angular/core';
+// import { TransportationService } from './transportation.service';
+// import { Car } from './car';
+// import { Bike } from './bike';
 
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css'],
+// })
+// export class AppComponent {
+//   cars: Car[];
+//   bikes: Bike[];
+
+//   constructor(private transportationService: TransportationService) {
+//     this.cars = this.transportationService.getCars();
+//     this.bikes = this.transportationService.getBikes();
+//   }
+// }
+
+// TODO: Event Binding (Привязка событий)
+// import { Component } from '@angular/core';
+
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css'],
+// })
+// export class AppComponent {
+//   constructor() {}
+
+//   saySomething() {
+//     alert('                              GOOD DAY');
+//   }
+// }
+
+// TODO: Making a Counter (Создание счетчика)
+// import { Component } from '@angular/core';
+
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css'],
+// })
+// export class AppComponent {
+//   constructor() {}
+
+//   counter = 0;
+
+//   increment() {
+//     this.counter++;
+//   }
+// }
+
+// TODO: Event Updating a String (Событие, обновляющее строку)
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: ['./app.component.css'],
 })
+export class AppComponent {
+  constructor() {}
 
-export class AppComponent  {
+  phrase = "Please:";
 
-cars: Car[];
-
-  constructor (private transportationService: TransportationService) {
-  this.cars = this.transportationService.getCars();
+  update() {
+    this.phrase += ' ...Fuck You!';
   }
-
 }
