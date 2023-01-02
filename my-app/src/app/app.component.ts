@@ -191,7 +191,55 @@
 // }
 
 // TODO: ngModel (Angular Модель)
+// import { Component } from '@angular/core';
+
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css'],
+// })
+// export class AppComponent {
+//   constructor() {}
+
+//   username: string='';
+// }
+
+// TODO: Sending Hard Coded Data to a Service (Отправка жестко закодированных данных в сервис)
+// import { Component } from '@angular/core';
+// import { TransportationService } from './transportation.service';
+// import { Car } from './car';
+// import { Bike } from './bike';
+
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css'],
+// })
+// export class AppComponent {
+//   cars: Car[];
+//   bikes: Bike[];
+
+//   constructor(private transportationService: TransportationService) {
+//     this.cars = this.transportationService.getCars();
+//     this.bikes = this.transportationService.getBikes();
+//   }
+
+//   addCar() {
+//     const newCar: Car = { make: 'Tesla', model: 'Model X', miles: 100 };
+//     this.transportationService.addCar(newCar);
+//   }
+
+//   addBike() {
+//     const newBike: Bike = { make: 'Merida', model: 'Big.Nine 10-MD 19', miles: 0 };
+//     this.transportationService.addBike(newBike);
+//   }
+// }
+
+//TODO: Sending Dynamic Data to a Service (Отправка динамических данных в сервис)
 import { Component } from '@angular/core';
+import { TransportationService } from './transportation.service';
+import { Car } from './car';
+import { Bike } from './bike';
 
 @Component({
   selector: 'app-root',
@@ -199,7 +247,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor() {}
+  cars: Car[];
+  bikes: Bike[];
+  make: string = '';
+  model: string = '';
+  miles: number = 0;
 
-  username: string='';
+  constructor(private transportationService: TransportationService) {
+    this.cars = this.transportationService.getCars();
+    this.bikes = this.transportationService.getBikes();
+  }
+
+  addCar() {
+    const newCar: Car = {
+      make: this.make,
+      model: this.model,
+      miles: this.miles,
+    };
+    this.transportationService.addCar(newCar);
+  }
+
+  addBike() {
+    const newBike: Bike = {
+      make: this.make,
+      model: this.model,
+      miles: this.miles,
+    };
+    this.transportationService.addBike(newBike);
+  }
 }

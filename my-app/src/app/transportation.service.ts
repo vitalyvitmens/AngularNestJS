@@ -18,6 +18,10 @@ export class TransportationService {
     return this.cars;
   }
 
+  addCar(car: Car) {
+    this.cars.push(car);
+  }
+
   stels: Bike = { make: 'Stels', model: '620MD', miles: 270 };
   gt: Bike = { make: 'GT', model: 'XRS77', miles: 57 };
   aist: Bike = { make: 'AIST', model: 'A220R', miles: 0 };
@@ -27,4 +31,9 @@ export class TransportationService {
   getBikes() {
     return this.bikes;
   }
+
+  addBike(bike: Bike) {
+    this.bikes.push(bike);
+  }
+
 }

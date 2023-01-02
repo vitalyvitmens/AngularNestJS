@@ -99,7 +99,7 @@
 </div> -->
 
 <!-- TODO: ngModel (Angular Модель) -->
-<h1><u>Схема двухсторонней привязки данных в действии</u></h1>
+<!-- <h1><u>Two Way Data Bind</u></h1>
 <div class="container">
   <p>COMPONENT:</p>
   <div class="display">
@@ -107,4 +107,51 @@
   </div>
   <p>VIEW:</p>
   <input [(ngModel)]="username" placeholder="enter text" />
+</div> -->
+
+<!-- TODO: Sending Hard Coded Data to a Service (Отправка жестко закодированных данных в сервис) -->
+<!-- <h1>Sending Hard Coded Data to a Service</h1>
+<div>
+  <div *ngFor="let car of cars">
+    <p>
+      We have a {{ car.make }} {{ car.model }} with a mileage of {{ car.miles }}
+    </p>
+  </div>
+  <button (click)="addCar()">add Car</button>
+
+  <br /><br /><br />
+  <div *ngFor="let bike of bikes">
+    <p>
+      We have a {{ bike.make }} {{ bike.model }} with a mileage of
+      {{ bike.miles }}
+    </p>
+  </div>
+  <button (click)="addBike()">add Bike</button>
+</div> -->
+
+<!-- TODO: Sending Dynamic Data to a Service (Отправка динамических данных в сервис) -->
+<h1>Sending Dynamic Data to a Service</h1>
+<h2>Cars:</h2>
+<div>
+  <div *ngFor="let car of cars">
+    <p>
+      We have a {{ car.make }} {{ car.model }} with a mileage of {{ car.miles }}
+    </p>
+  </div>
+  <h2>Bikes:</h2>
+  <div *ngFor="let bike of bikes">
+    <p>
+      We have a {{ bike.make }} {{ bike.model }} with a mileage of
+      {{ bike.miles }}
+    </p>
+  </div>
+  <h2>ngModels:</h2>
+  <div>
+    <input [(ngModel)]="make" placeholder="make" />
+    <input [(ngModel)]="model" placeholder="model" />
+    <input type="number" [(ngModel)]="miles" placeholder="miles" />
+  </div>
+  <h3>Когда вы вводите марку, модель, пробег и нажимаете кнопку, данные отправляется в наш поток данных и обновляются в сервисе, который затем обновляет view:</h3>
+  <button (click)="addCar()">add Car</button>
+  <button (click)="addBike()">add Bike</button>
 </div>
