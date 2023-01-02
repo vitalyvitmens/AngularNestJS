@@ -312,7 +312,6 @@ p {
 }
 
 button {
-  margin-top: 20px;
   margin-right: 20px;
   padding: 5px 15px 5px 15px;
   width: auto;
@@ -330,7 +329,8 @@ button:hover {
   border-radius: 10px;
 }
 
-input {margin-top: 10px;
+input {
+  margin-bottom: 5px;
   padding: 0px 10px 0px 10px;
   width: 100%;
   min-height: 30px;
