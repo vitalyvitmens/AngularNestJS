@@ -173,6 +173,24 @@
 // }
 
 // TODO: Event Updating a String (Событие, обновляющее строку)
+// import { Component } from '@angular/core';
+
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css'],
+// })
+// export class AppComponent {
+//   constructor() {}
+
+//   phrase = "Please:";
+
+//   update() {
+//     this.phrase += ' ...Fuck You!';
+//   }
+// }
+
+// TODO: ngModel (Angular Модель)
 import { Component } from '@angular/core';
 
 @Component({
@@ -183,9 +201,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   constructor() {}
 
-  phrase = "Please:";
-
-  update() {
-    this.phrase += ' ...Fuck You!';
-  }
+  username: string='';
 }

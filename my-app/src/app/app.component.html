@@ -91,9 +91,20 @@
 </div> -->
 
 <!-- TODO: Event Updating a String (Событие, обновляющее строку) -->
-<div class="container">
+<!-- <div class="container">
   <div class="display">
     {{ phrase }}
   </div>
   <button (click)="update()">click me</button>
+</div> -->
+
+<!-- TODO: ngModel (Angular Модель) -->
+<h1><u>Схема двухсторонней привязки данных в действии</u></h1>
+<div class="container">
+  <p>COMPONENT:</p>
+  <div class="display">
+    {{ username }}
+  </div>
+  <p>VIEW:</p>
+  <input [(ngModel)]="username" placeholder="enter text" />
 </div>

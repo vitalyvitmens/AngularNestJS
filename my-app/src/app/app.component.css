@@ -189,7 +189,7 @@ button:hover {
 } */
 
 /* TODO: Event Updating a String (Событие, обновляющее строку) */
-.container {
+/* .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -220,4 +220,40 @@ button:hover {
 
 .display {
   font-size: 3.0em;
+} */
+
+/* TODO: ngModel (Angular Модель) */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  padding: 5px;
+  color: red;
+  font-weight: 700;
+}
+
+.display {
+  width: 100vw;
+  height: 45px;
+  background-color: antiquewhite;
+  font-size: 2em;
+  font-weight: 400;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+input {
+  width: 100vw;
+  height: 45px;
+  background-color: antiquewhite;
+  font-size: 2em;
+  font-weight: 400;
+  color: blue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 10px;
+  border: 2px solid black;
 }
